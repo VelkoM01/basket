@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+		<link href="moj_cssprojekat.css" type="text/css" rel="stylesheet">
+<script src="moj_js.js"></script>
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+h1 {
+	color:white;
+	text-decoration:underline;
+	}
+	
+	#kontakt {
+	width:939px;
+	height:500px;
+	border: 1pt solid green;
+	background-color:lightblue;
+	color:black;
+	}
+	p, input {
+	font-size:26px;
+	}
+	
+	</style>
+</head>
+<body>
+ 
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Home
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="istorija.html">History of basketball </a>
+      <a href="pravila.html">Rules</a>
+      
+    </div>
+  </div>
+  <a href="nba.html">NBA</a>
+  <a href="evroliga.html">Euroleague</a>
+  <a href="kviz.html">Quiz</a>
+  <a href="kontakt.html">Contact</a>
+</div> 
+ <h1>Contact</h1>
+<div id="kontakt">
+<p><b>If you have any additional questions, you can ask at the email below:</b></p>
+<a href="https://www.google.com/gmail/"><input type="text" value="veljkomilanov28@gmail.com" style="width:700px;"></a><br>
+<p><b>or you can ask us via Facebook:</b></p><br>
+<a href="https://www.facebook.com/veljko.milanov.7"><img src="facebook.jpg" width="300px" height="200px"></a>
+
+
+
+</div>
+</body>
+</html>

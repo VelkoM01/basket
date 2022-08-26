@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+		<link href="moj_cssprojekat.css" type="text/css" rel="stylesheet">
+<script src="moj_js.js"></script>
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+	h1, h2 {
+	text-decoration:underline;
+	color:white;
+	}
+	body, div, form {
+	color:white;
+	}
+	
+	#blok {
+	width:350px;
+	height:400px;
+	border:1pt solid red;
+	background-color:lightblue;
+	color:black;
+	
+	}
+	
+	
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Home
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="istorija.html">History of basketball </a>
+      <a href="pravila.html">Rules</a>
+      
+    </div>
+  </div>
+  <a href="nba.html">NBA</a>
+  <a href="evroliga.html">Euroleague</a>
+  <a href="kviz.html">Quiz</a>
+  <a href="kontakt.html">Contact</a>
+</div>  
+
+ <h1>Quiz</h1>
+ 
+  <h2 class="quizHeader">Take the quiz:</h2>
+  
+	<table style="width:583px">
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">1. Who invented basketball as a sport?</p>
+
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">James Naismith</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Lebron James</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Michael Jordan</label>
+	        <br>
+	       
+    		</ul>
+	  	</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">2. How many players can one team have on the court during the game?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>10</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2">5</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>12</label>
+	        <br>
+	        
+	    	</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">3. Who has won the most titles in the NBA?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Lakers</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="1">
+	        <label id="correctString3">Boston Celtics</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Miami Heat</label>
+	        <br>
+	       
+	    	</ul>
+		</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">4. How many teams are there in the Euroleague this year?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>14</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4">16</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>8</label>
+	        <br>
+	       
+    		</ul>
+	  	</div>
+	  </td>
+	  
+	</tr>
+	</table>
+<br/>
+<p>Enter name:</p>
+<input type="text" id="ime" required>
+<p>Enter last name:</p>
+<input type="text" id="prezime">
+<p>Enter your favorite club:</p>
+<input type="textbox" id="klub" required><br>
+
+
+  <div class="submitter">
+          <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+          type="submit" value="Submit" />
+    </div>
+  
+<!--show only wrong answers on submit-->
+    <div class="quizAnswers" id="correctAnswer1"></div>
+	    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+
+<!--show score upon submit-->
+    <div>
+    	<h2 class="quizScore" id="userScore"></h2>
+    </div>
+	</div>
+
+ <h1>Your favorite team's winning percentage</h1>
+<div id="blok">
+<p>Enter the number of victories of your favorite club:</p>
+<br>
+<input type="text" id="pobede" required><br><br>
+<p>Enter the number of defeats of your favorite club:</p>
+<br>
+<input type="text" id="porazi" required><br><br>
+<button onclick="pobede()">Calculate</button><br>
+<p>Winning percentage:</p>
+<input type="text" id="procenat" style="width:300px;">
+
+</div>
+ 
+
+ 
+</body>
+</html>
